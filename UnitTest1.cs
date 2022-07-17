@@ -20,7 +20,7 @@ namespace FYPUITest
             aboutUs.Click();
 
             IWebElement actualResultTest = driver.FindElement(By.XPath("/html/body/div[1]/p"));
-            Assert.IsTrue(actualResultTest.Text.Equals("About Us RPMovie provides an outlet for students, lecturers and members of the public to watch the latest up and coming movies at a affordable price. Sign up TODAY to see what movies we will be screening in the near future!"));
+            Assert.IsTrue(actualResultTest.Text.Equals("About Us RPMovie provides an outlet for students, lecturers and members of the public to watch the latest up and coming movies at a affordable price. Sign up TODAY to see what movies we will be screening in the near future! Hope to see you there!"));
 
             driver.Quit();
 

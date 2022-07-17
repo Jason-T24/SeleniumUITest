@@ -27,14 +27,16 @@ namespace FYPUITest
             movieButton.Click();
 
             IWebElement movie = webDriver.FindElement(By.XPath("/html/body/div[1]/h2"));
-            IWebElement title = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[1]"));
-            IWebElement director = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[2]"));
-            IWebElement dateTime = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[3]"));
-            IWebElement duration = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[4]"));
-            IWebElement price = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[5]"));
-            IWebElement theater = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[6]"));
+            IWebElement movieid = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[1]"));
+            IWebElement title = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[2]"));
+            IWebElement director = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[3]"));
+            IWebElement dateTime = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[4]"));
+            IWebElement duration = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[5]"));
+            IWebElement price = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[6]"));
+            IWebElement theater = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[7]"));
 
             Assert.IsTrue(movie.Text.Equals("Movies"));
+            Assert.IsTrue(movieid.Text.Equals("Movies"));
             Assert.IsTrue(title.Text.Equals("Title"));
             Assert.IsTrue(director.Text.Equals("Director"));
             Assert.IsTrue(dateTime.Text.Equals("Date/Time"));
