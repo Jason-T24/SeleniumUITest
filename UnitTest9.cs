@@ -36,7 +36,7 @@ namespace FYPUITest
             IWebElement theater = webDriver.FindElement(By.XPath("/html/body/div[1]/div/table/thead/tr/th[7]"));
 
             Assert.IsTrue(movie.Text.Equals("Movies"));
-            Assert.IsTrue(movieid.Text.Equals("Movies"));
+            Assert.IsTrue(movieid.Text.Equals("Movie ID"));
             Assert.IsTrue(title.Text.Equals("Title"));
             Assert.IsTrue(director.Text.Equals("Director"));
             Assert.IsTrue(dateTime.Text.Equals("Date/Time"));
