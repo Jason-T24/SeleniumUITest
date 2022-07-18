@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System;
 
-// Extra comment 
+
 namespace FYPUITest
 {
     [TestClass]
