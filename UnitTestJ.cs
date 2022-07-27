@@ -4,13 +4,13 @@ using OpenQA.Selenium;
 using System.Threading;
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest6
+    public class UnitTestJ
     {
         [TestMethod]
-        public void TestCreateMovieWithJoonHoesAccount()
+        public void TestCreateMovieAsManager()
         {
             int waitingTime = 5000;
             string URL = "http://fypmovie.azurewebsites.net/Account/Login";
@@ -24,7 +24,7 @@ namespace FYPUITest
             By durationBar = By.Name("Duration");
             By priceBar = By.Name("Price");
             By theaterBar = By.Name("Theater");
-            
+
 
             webDriver.FindElement(userIdBar).SendKeys("JoonHoe");
             webDriver.FindElement(passwordBar).SendKeys("password0");
@@ -46,7 +46,7 @@ namespace FYPUITest
             Thread.Sleep(waitingTime);
 
             IWebElement actualResultTest = webDriver.FindElement(By.XPath("//div[@class='alert alert-success']"));
-            
+
             Assert.IsTrue(actualResultTest.Text.Equals("Movie Created"));
 
             webDriver.Quit();

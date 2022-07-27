@@ -3,10 +3,10 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest10
+    public class UnitTestF
     {
         [TestMethod]
         public void TestViewMembers()
@@ -36,7 +36,7 @@ namespace FYPUITest
             Assert.IsTrue(email.Text.Equals("Email"));
             Assert.IsTrue(lastLogin.Text.Equals("Last Login"));
 
-            //webDriver.Quit();
+            webDriver.Quit();
         }
     }
 }

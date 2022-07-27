@@ -3,10 +3,10 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest9
+    public class UnitTestG
     {
         [TestMethod]
         public void TestViewMovies()

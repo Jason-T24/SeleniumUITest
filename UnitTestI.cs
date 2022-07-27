@@ -3,10 +3,11 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System.Threading;
 using System;
-namespace FYPUITest
+
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest7
+    public class UnitTestI
     {
         [TestMethod]
         public void TestRegisterAnAccount()

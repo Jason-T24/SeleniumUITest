@@ -1,14 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-
-
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest13
+    public class UnitTestM
     {
         [TestMethod]
         public void TestDeleteMemberAsManager()
@@ -28,7 +26,7 @@ namespace FYPUITest
             IWebElement memberButton = webDriver.FindElement(By.XPath("/html/body/nav/div/ul[1]/li[2]/a"));
             memberButton.Click();
 
-            IWebElement deleteButton = webDriver.FindElement(By.XPath("/html/body/div[1]/table/tbody/tr[5]/td[5]/a"));
+            IWebElement deleteButton = webDriver.FindElement(By.XPath("/html/body/div[1]/table/tbody/tr[6]/td[5]/a"));
             deleteButton.Click();
 
             IAlert alert = webDriver.SwitchTo().Alert();

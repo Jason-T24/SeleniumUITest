@@ -3,13 +3,13 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest3
+    public class UnitTestH
     {
         [TestMethod]
-        public void TestLoginIntoJasonsAccount()
+        public void TestLogoutfunction()
         {
             string URL = "http://fypmovie.azurewebsites.net/Account/Login";
             IWebDriver webDriver = new ChromeDriver();
@@ -18,13 +18,17 @@ namespace FYPUITest
             By userIdBar = By.Name("UserID");
             By passwordBar = By.Name("Password");
 
-            webDriver.FindElement(userIdBar).SendKeys("Jason");
-            webDriver.FindElement(passwordBar).SendKeys("password1");
+            webDriver.FindElement(userIdBar).SendKeys("JoonHoe");
+            webDriver.FindElement(passwordBar).SendKeys("password0");
             IWebElement loginButton = webDriver.FindElement(By.XPath("/html/body/div[1]/form/div/div[3]/input"));
             loginButton.Click();
 
-            IWebElement actualResultTest = webDriver.FindElement(By.XPath("/html/body/nav/div/ul[2]/li[1]/p"));
-            Assert.IsTrue(actualResultTest.Text.Equals("Welcome Jason Tan"));
+            IWebElement logoutButton = webDriver.FindElement(By.XPath("/html/body/nav/div/ul[2]/li[2]/a"));
+            logoutButton.Click();
+
+            IWebElement actualResultTest = webDriver.FindElement(By.XPath("/html/body/div[1]/form/h2"));
+
+            Assert.IsTrue(actualResultTest.Text.Equals("Please Sign In"));
 
             webDriver.Quit();
         }

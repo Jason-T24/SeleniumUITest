@@ -5,10 +5,10 @@ using OpenQA.Selenium;
 
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest11
+    public class UnitTestK
     {
         [TestMethod]
         public void TestDeleteMovieAsMember()

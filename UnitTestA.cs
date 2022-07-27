@@ -3,13 +3,13 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System;
 
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest8
+    public class UnitTestA
     {
         [TestMethod]
-        public void TestLogoutfunction()
+        public void TestLoginIntoJoonHoesAccount()
         {
             string URL = "http://fypmovie.azurewebsites.net/Account/Login";
             IWebDriver webDriver = new ChromeDriver();
@@ -23,12 +23,8 @@ namespace FYPUITest
             IWebElement loginButton = webDriver.FindElement(By.XPath("/html/body/div[1]/form/div/div[3]/input"));
             loginButton.Click();
 
-            IWebElement logoutButton = webDriver.FindElement(By.XPath("/html/body/nav/div/ul[2]/li[2]/a"));
-            logoutButton.Click();
-
-            IWebElement actualResultTest = webDriver.FindElement(By.XPath("/html/body/div[1]/form/h2"));
-
-            Assert.IsTrue(actualResultTest.Text.Equals("Please Sign In"));
+            IWebElement actualResultTest = webDriver.FindElement(By.XPath("/html/body/nav/div/ul[2]/li[1]/p"));
+            Assert.IsTrue(actualResultTest.Text.Equals("Welcome Goh Joon Hoe"));
 
             webDriver.Quit();
         }

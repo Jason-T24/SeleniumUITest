@@ -3,11 +3,10 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System;
 
-// unit
-namespace FYPUITest
+namespace SeleniumUITest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestE
     {
         [TestMethod]
         public void TestShowAboutUsWhenClicked()
